@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moncollier - Pendientes</title>
+
+    <!-- Estilos y Font Awesome -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+<!-- Encabezado fijo -->
+<header>
+    <div class="logo">MONCOLLIER</div>
+    <nav>
+        <a href="index.html">INICIO</a>
+        <a href="pendientes.html" class="active">PENDIENTES</a>
+        <a href="collares.html">COLLARES</a>
+        <a href="sobre.html">SOBRE NOSOTROS</a>
+        <a href="#" class="cart-icon" onclick="verCarrito()">
+            <i class="fa-solid fa-cart-shopping fa-2x"></i>
+            <span id="contador-carrito">0</span>
+        </a>
+    </nav>
+</header>
+
+<!-- Sección Hero -->
+<section class="hero productos-hero">
+    <h1 class="productos-titulo">DESCUBRE NUESTRA COLECCIÓN</h1>
+</section>
+
+<!-- Sección de productos -->
+<section class="productos">
+    <h2>Pendientes exclusivos diseñados para ti</h2>
+    <div class="grid-productos">
+        <div class="producto">
+            <img src="pendientes1.png" alt="Pendiente Elegante" />
+            <h3>Pendiente Estrella</h3>
+            <p>Plata 925 - Diseño exclusivo</p>
+            <span class="precio">€45.99</span>
+            <button onclick="agregarAlCarrito('Pendiente Estrella', 55.99)">Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="pendientes2.png" alt="Pendiente Clásico" />
+            <h3>Pendiente Luna</h3>
+            <p>Baño en oro de 18k - Hecho a mano</p>
+            <span class="precio">€55.99</span>
+            <button onclick="agregarAlCarrito('Pendiente Luna', 55.99)">Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="pendientes3.png" alt="Pendiente Minimalista" />
+            <h3>Pendiente Minimalista</h3>
+            <p>Diseño moderno y sofisticado</p>
+            <span class="precio">€39.99</span>
+            <button onclick="agregarAlCarrito('Pendiente Minimalista', 39.99)">Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="pendientes4.png" alt="Pendiente Flecos" />
+            <h3>Pendiente Flecos</h3>
+            <p>Diseño vanguardista en plata</p>
+            <span class="precio">€49.99</span>
+            <button onclick="agregarAlCarrito('Pendiente Geométrico', 49.99)">Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="pendientes5.png" alt="Pendiente Aro Doble" />
+            <h3>Pendiente Aro Doble</h3>
+            <p>Elegante</p>
+            <span class="precio">€60.99</span>
+            <button onclick="agregarAlCarrito('Pendiente Aro Doble', 60.99)">Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="pendientes6.png" alt="Pendiente Geométrico" />
+            <h3>Pendiente Geométrico</h3>
+            <p>Minimalista y versátil</p>
+            <span class="precio">€42.99</span>
+            <button onclick="agregarAlCarrito('Pendiente Geométrico', 42.99)">Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="pendientes7.png" alt="Pendiente Aro Colgante" />
+            <h3>Pendiente Aro Colgante</h3>
+            <p>Diseño moderno con un toque atemporal</p>
+            <span class="precio">€50.99</span>
+            <button onclick="agregarAlCarrito('Pendiente Aro Colgante', 50.99)">Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="pendientes8.png" alt="Aros Minimalistas" />
+            <h3>Aros Minimalistas</h3>
+            <p>Sofisticación y estilo</p>
+            <span class="precio">€35.95</span>
+            <button onclick="agregarAlCarrito('Aros Minimalistas', 35.99)">Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="pendientes9.png" alt="Estrellas Minimalistas" />
+            <h3>Estrellas Minimalistas</h3>
+            <p>Brillante con un toque de delicadeza</p>
+            <span class="precio">€35.95</span>
+            <button onclick="agregarAlCarrito('Estrellas Minimalistas', 35.95)">Añadir al carrito</button>
+        </div>
+    </div>
+</section>
+
+<!-- Modal Carrito -->
+<div id="modal-carrito" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarCarrito()">&times;</span>
+        <h2>Carrito de Compras</h2>
+        <div id="contenido-carrito"></div>
+        <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+        <button onclick="cerrarCarrito()">Cerrar</button>
+        <button onclick="finalizarCompra()">Comprar Ahora</button>
+    </div>
+</div>
+
+<!-- Pie de página -->
+<footer>
+    <div class="footer-info">
+        <span>🇪🇸 ESPAÑA (EUR €)</span>
+        <span>ESPAÑOL</span>
+    </div>
+    <p>&copy; 2025 - MONCOLLIERBCN</p>
+    <div class="payment-methods">
+        <img src="amex.avif" alt="AMEX" />
+        <img src="applepay.jpg" alt="Apple Pay" />
+        <img src="googlepay.png" alt="Google Pay" />
+        <img src="klarna.png" alt="Klarna" />
+        <img src="mastercard.png" alt="Mastercard" />
+        <img src="paypal.png" alt="Paypal" />
+        <img src="shop.webp" alt="Shop Pay" />
+        <img src="unionpay.png" alt="Union Pay" />
+        <img src="visa.png" alt="Visa" />
+    </div>
+</footer>
+
+<!-- Script conectado a la API REST -->
+<script src="script.js"></script>
+</body>
+</html>

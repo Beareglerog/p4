@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moncollier - Sobre Nosotros</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<!-- Encabezado -->
+<header>
+  <div class="logo">MONCOLLIER</div>
+  <nav>
+    <a href="index.html">INICIO</a>
+    <a href="pendientes.html">PENDIENTES</a>
+    <a href="collares.html">COLLARES</a>
+    <a href="sobre.html" class="active">SOBRE NOSOTROS</a>
+    <a href="#" class="cart-icon" onclick="verCarrito()">
+      <i class="fa-solid fa-cart-shopping fa-2x"></i>
+      <span id="contador-carrito">0</span>
+    </a>
+  </nav>
+</header>
+
+<!-- Sección principal -->
+<section class="hero">
+  <h1>Nuestras Tiendas</h1>
+</section>
+
+<section class="tiendas">
+  <div class="fila">
+    <div class="tienda">
+      <h2>Madrid</h2>
+      <p>Dirección: Calle Gran Vía, 15, Madrid</p>
+      <p>Teléfono: +34 910 123 456</p>
+      <p>Email: madrid@moncollier.com</p>
+      <img src="tienda1.png" alt="Tienda Madrid" />
+    </div>
+    <div class="tienda">
+      <h2>Barcelona</h2>
+      <p>Dirección: Calle Madrazo, 104, Barcelona</p>
+      <p>Teléfono: +34 930 987 654</p>
+      <p>Email: barcelona@moncollier.com</p>
+      <img src="tienda2.png" alt="Tienda Barcelona" />
+    </div>
+  </div>
+  <div class="fila-unica">
+    <div class="tienda">
+      <h2>Sevilla</h2>
+      <p>Dirección: Avenida de la Constitución, 10, Sevilla</p>
+      <p>Teléfono: +34 955 654 321</p>
+      <p>Email: sevilla@moncollier.com</p>
+      <img src="tienda3.png" alt="Tienda Sevilla" />
+    </div>
+  </div>
+</section>
+
+<!-- Modal del carrito -->
+<div id="modal-carrito" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarCarrito()">&times;</span>
+    <h2>Carrito de Compras</h2>
+    <div id="contenido-carrito"></div>
+    <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+    <button onclick="cerrarCarrito()">Cerrar</button>
+    <button onclick="finalizarCompra()">Comprar Ahora</button>
+  </div>
+</div>
+
+<!-- Pie de página -->
+<footer>
+  <div class="footer-info">
+    <span>🇪🇸 ESPAÑA (EUR €)</span>
+    <span>ESPAÑOL</span>
+  </div>
+  <p>&copy; 2025 - MONCOLLIERBCN</p>
+  <div class="payment-methods">
+    <img src="amex.avif" alt="AMEX" />
+    <img src="applepay.jpg" alt="Apple Pay" />
+    <img src="googlepay.png" alt="Google Pay" />
+    <img src="klarna.png" alt="Klarna" />
+    <img src="mastercard.png" alt="Mastercard" />
+    <img src="paypal.png" alt="Paypal" />
+    <img src="shop.webp" alt="Shop Pay" />
+    <img src="unionpay.png" alt="Union Pay" />
+    <img src="visa.png" alt="Visa" />
+  </div>
+</footer>
+
+<!-- Script de conexión con API REST -->
+<script src="script.js"></script>
+</body>
+</html>

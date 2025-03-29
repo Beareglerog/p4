@@ -1,0 +1,258 @@
+/* Estilos generales */
+body {
+    font-family: "Georgia", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; 
+    color: #333;
+    line-height: 2; 
+  }
+  
+  /* Encabezado fijo con sombra */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0; 
+    background-color: white; 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 50px; 
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 10px; 
+  }
+
+  
+  /* Navegación */
+  header nav {
+    display: flex;
+    gap: 30px; /* Espacio entre los enlaces */
+    justify-content: center;
+    padding-bottom: 0; 
+  }
+  
+  header nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: light;
+    font-size: 18px;
+    padding: 5px 10px; 
+  }
+  
+  /* Sección hero (imagen principal) */
+  .hero {
+    background: url("FONDO2.webp") no-repeat center center / cover;
+    background-size: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 150px; /* Evita que el header fijo cubra la sección */
+    padding: 70px 0;
+  }
+  
+  .hero h1 {
+    font-size: 90px;
+    font-weight: bolder;
+    font-style: italic;
+    color: #FF1493;
+    margin-bottom: 20px; /* Espacio debajo del título principal */
+  }
+
+/* Sección hero con imagen de fondo y menos altura */
+.productos-hero {
+  background: url("FONDO2.webp") no-repeat center center / cover;
+  min-height: 80px; 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center;
+  margin-top: 150px;
+  padding: 70px 40px; 
+}
+
+/* Ajustar el texto dentro del hero */
+.productos-hero h1 {
+  font-size: 35px; /* Un tamaño más moderado */
+  font-weight: lighter;
+  color: #333; /* Un gris oscuro elegante */
+  font-style: oblique;
+  padding: 0px 0px;
+  background: rgba(255, 255, 255, 0.712); /* Fondo semitransparente para mejorar legibilidad */
+  border-radius: 4px;
+}
+
+
+  /* Info Section */
+  .info-section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  
+  .info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .info div {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos están en columna */
+    align-items: center; /* Centra los elementos en el eje horizontal */
+    text-align: center; /* Asegura que el texto esté alineado */
+  }
+  
+  /*PRODUCTOS*/
+  .grid-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px; 
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Ajuste de los productos */
+.producto {
+    text-align: center;
+    background: #f9f9f9; /* Fondo suave */
+    padding: 15px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.producto img {
+    width: 100%; /* Asegura que las imágenes se ajusten */
+    max-width: 250px; /* Limita el tamaño máximo */
+    height: auto;
+    border-radius: 5px;
+}
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f3f3f3;
+    margin-top: 40px;
+  }
+  
+  .footer-info {
+    margin-bottom: 10px;
+  }
+  
+  .payment-methods img {
+    height: 30px;
+    margin: 5px;
+  }
+
+  /*PARA AÑADIR CARRO*/
+/* Estilos para la ventana modal del carrito */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-contenido {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.cerrar {
+  color: red;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Estilos para el ícono del carrito */
+.cart-icon {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
+
+#contador-carrito {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+
+/* Estilos para los productos en el carrito */
+.item-carrito {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.tiendas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.fila {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.fila .tienda {
+  max-width: 300px;
+  margin: 20px;
+}
+
+.fila-unica {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Ajuste de imágenes */
+.tienda img {
+  width: 100%;
+  max-width: 250px;
+  height: 200px; 
+  object-fit: cover; 
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+
+
+  
