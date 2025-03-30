@@ -12,6 +12,6 @@
 
 ## COMPROBACIÓN
 
-![EJ1](./ejemplos-uso/Captura de pantalla 2025-03-30 a las 20.31.45.png)
-![EJ2](./ejemplos-uso/Captura de pantalla 2025-03-30 a las 20.31.52.png)
-![EJ3](./ejemplos-uso/Captura de pantalla 2025-03-30 a las 20.31.57.png)
+![EJ1](./ejemplos-uso/Captura%20de%20pantalla%202025-03-30%20a%20las%2020.31.45.png)  
+![EJ2](./ejemplos-uso/Captura%20de%20pantalla%202025-03-30%20a%20las%2020.31.52.png)  
+![EJ3](./ejemplos-uso/Captura%20de%20pantalla%202025-03-30%20a%20las%2020.31.57.png)
